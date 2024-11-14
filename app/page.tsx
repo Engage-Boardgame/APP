@@ -1,12 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import TypographieH2 from "@/components/ui/TypographieH2";
+import TypographieBlockquote from "@/components/ui/TypographieBlockquote";
 import TypographieH1 from "@/components/ui/TypographieH1";
+import TypographieH2 from "@/components/ui/TypographieH2";
 import TypographieH3 from "@/components/ui/TypographieH3";
 import TypographieH4 from "@/components/ui/TypographieH4";
 import TypographieP from "@/components/ui/TypographieP";
-import TypographieBlockquote from "@/components/ui/TypographieBlockquote";
 
 export default function Home() {
 
