@@ -1,3 +1,8 @@
 {
-    "Welcome to React": "Bienvenue à React"
+    "Welcome to React": "Bienvenue à React",
+    "Connection": "Connexion",
+    "Log in": "Se connecter",
+    "Username": "Nom d'utilisateur",
+    "Password": "Mot de passe",
+    "Cancel": "Annuler"
 }

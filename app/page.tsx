@@ -7,8 +7,17 @@ import TypographieH2 from "@/components/ui/TypographieH2";
 import TypographieH3 from "@/components/ui/TypographieH3";
 import TypographieH4 from "@/components/ui/TypographieH4";
 import TypographieP from "@/components/ui/TypographieP";
+import {useAppDispatch} from "@/lib/hooks";
+import {setModal} from "@/features/appSlice";
+import {CONNEXION_MODAL} from "@/components/Factory/ModalFactory";
 
 export default function Home() {
+
+    const dispatch = useAppDispatch();
+
+    const handleConnexion = () => {
+        dispatch(setModal(CONNEXION_MODAL));
+    }
 
     return (
         <div>
@@ -19,6 +28,9 @@ export default function Home() {
             <TypographieP>P</TypographieP>
             <TypographieBlockquote>Block quote</TypographieBlockquote>
             <Button>Click me</Button>
+            <div onClick={handleConnexion}>
+                <TypographieP>Se connecter</TypographieP>
+            </div>
         </div>
     );
 }
