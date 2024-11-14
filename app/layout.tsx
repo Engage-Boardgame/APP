@@ -1,3 +1,6 @@
+
+import { Navbar } from "@/components/navbar/Navbar";
+import { Toaster } from "@/components/ui/toaster";
 import { I18nProvider } from "@/providers/I18nProvider";
 import StoreProvider from "@/providers/StoreProvider";
 import type { Metadata } from "next";
@@ -13,7 +16,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="fr">
             <body>
                 <I18nProvider>
-                    <StoreProvider>{children}</StoreProvider>
+                    <StoreProvider>
+                        <div className="min-h-screen flex flex-col">
+                            <Navbar />
+                            {children}
+                            <Toaster />
+                        </div>
+                    </StoreProvider>
                 </I18nProvider>
             </body>
         </html>
