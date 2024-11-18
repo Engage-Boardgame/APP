@@ -1,10 +1,9 @@
 import {
     Drawer, DrawerClose,
     DrawerContent,
-    DrawerDescription, DrawerFooter,
+    DrawerFooter,
     DrawerHeader,
     DrawerTitle,
-    DrawerTrigger
 } from "@/components/ui/drawer";
 import {Button} from "@/components/ui/button";
 import {
@@ -19,8 +18,9 @@ import useMediaQuery from "@/utils/useMediaQuery";
 import React, {useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/lib/hooks";
 import {setModal} from "@/features/appSlice";
-import TypographieH2 from "@/components/ui/TypographieH2";
 import {useTranslation} from "react-i18next";
+
+// -------------
 
 const ConnexionModal = () => {
 
@@ -43,8 +43,6 @@ const ConnexionModal = () => {
 
     const handleFormSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-            console.log("Username:", username);
-        console.log("Password:", password);
     };
 
     const isDesktop = useMediaQuery("(min-width: 768px)")
@@ -60,8 +58,18 @@ const ConnexionModal = () => {
                     <DialogHeader>
                         <DialogTitle>{t("Connection")}</DialogTitle>
                     </DialogHeader>
-                    <DialogDescription />
-                    <ProfileForm />
+                    <DialogDescription/>
+                    <form className={cn("grid items-start gap-4")} onSubmit={handleFormSubmit}>
+                        <div className="grid gap-2">
+                            <Label htmlFor="username">{t("Username")}</Label>
+                            <Input type="text" id="username" value={username} onChange={handleUsernameChange}/>
+                        </div>
+                        <div className="grid gap-2">
+                            <Label htmlFor="password">{t("Password")}</Label>
+                            <Input type="password" id="password" value={password} onChange={handlePasswordChange}/>
+                        </div>
+                        <Button type="submit">{t("Log in")}</Button>
+                    </form>
                 </DialogContent>
             </Dialog>
         )
@@ -73,31 +81,27 @@ const ConnexionModal = () => {
                 <DrawerHeader className="text-left">
                     <DrawerTitle>{t("Connection")}</DrawerTitle>
                 </DrawerHeader>
-                <ProfileForm className="px-4" />
+                <form className={cn("grid items-start gap-4 pl-4 pr-4")} onSubmit={handleFormSubmit}>
+                    <div className="grid gap-2">
+                        <Label htmlFor="username">{t("Username")}</Label>
+                        <Input type="text" id="username" value={username} onChange={handleUsernameChange}/>
+                    </div>
+                    <div className="grid gap-2">
+                        <Label htmlFor="password">{t("Password")}</Label>
+                        <Input type="password" id="password" value={password} onChange={handlePasswordChange}/>
+                    </div>
+                </form>
                 <DrawerFooter className="pt-2">
                     <DrawerClose asChild>
-                        <Button variant="outline">{t("Cancel")}</Button>
+                        <div className={"flex flex-col gap-2"}>
+                            <Button type="submit">{t("Log in")}</Button>
+                            <Button variant="outline">{t("Cancel")}</Button>
+                        </div>
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>
         </Drawer>
     )
-
-    function ProfileForm({ className }: React.ComponentProps<"form">) {
-        return (
-            <form className={cn("grid items-start gap-4", className)} onSubmit={handleFormSubmit}>
-                <div className="grid gap-2">
-                    <Label htmlFor="username">{t("Username")}</Label>
-                    <Input type="text" id="username" value={username} onChange={handleUsernameChange} />
-                </div>
-                <div className="grid gap-2">
-                    <Label htmlFor="password">{t("Password")}</Label>
-                    <Input type="password" id="password" value={password} onChange={handlePasswordChange}/>
-                </div>
-                <Button type="submit">{t("Log in")}</Button>
-            </form>
-        )
-    }
 }
 
 

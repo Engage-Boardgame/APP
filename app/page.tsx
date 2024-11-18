@@ -10,8 +10,13 @@ import TypographieP from "@/components/ui/TypographieP";
 import {useAppDispatch} from "@/lib/hooks";
 import {setModal} from "@/features/appSlice";
 import {CONNEXION_MODAL} from "@/components/Factory/ModalFactory";
+import {useTranslation} from "react-i18next";
+
+// --------------
 
 export default function Home() {
+
+    const {t} = useTranslation();
 
     const dispatch = useAppDispatch();
 
@@ -29,7 +34,7 @@ export default function Home() {
             <TypographieBlockquote>Block quote</TypographieBlockquote>
             <Button>Click me</Button>
             <div onClick={handleConnexion}>
-                <TypographieP>Se connecter</TypographieP>
+                <TypographieP>{t("Log in")}</TypographieP>
             </div>
         </div>
     );
