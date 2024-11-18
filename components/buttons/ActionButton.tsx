@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+import { ActionButtonType } from "@/types/ActionButtonType";
 
 type ActionButtonProps = {
-    text: string;
+    actionButton: ActionButtonType;
 };
 
-export const ActionButton = ({ text }: ActionButtonProps) => {
+export const ActionButton = ({ actionButton }: ActionButtonProps) => {
     return (
-        <Button className="w-full relative">
-            <ArrowRightIcon className="w-4 h-4 absolute left-2" />
-            <span>{text}</span>
+        <Button className="w-full relative" onClick={actionButton.action}>
+            <div className="w-4 h-4 absolute left-2">{actionButton.picto}</div>
+            <span>{actionButton.text}</span>
         </Button>
     );
 };
