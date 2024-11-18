@@ -3,10 +3,10 @@
 import { ActionButton } from "@/components/buttons/ActionButton";
 import { Button } from "@/components/ui/button";
 import TypographieP from "@/components/ui/TypographieP";
-import {useAppDispatch} from "@/lib/hooks";
 import {setModal} from "@/features/appSlice";
 import {CONNEXION_MODAL} from "@/components/Factory/ModalFactory";
 import {useTranslation} from "react-i18next";
+import {useAppDispatch} from "@/hooks/hooks";
 
 // --------------
 
@@ -44,11 +44,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-                <div onClick={handleConnexion}>
-                    <TypographieP>{t("Log in")}</TypographieP>
-                </div>
-                <Button variant="link" className="mb-4 underline">
-                    {t("Login")}
+                <Button variant="link" onClick={handleConnexion} className="mb-4 underline">
+                    {t("Log in")}
                 </Button>
             </div>
         </div>

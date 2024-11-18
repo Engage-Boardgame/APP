@@ -1,6 +1,6 @@
 "use client";
 import modalFactory from "@/components/Factory/ModalFactory";
-import {useAppSelector} from "@/lib/hooks";
+import {useAppSelector} from "@/hooks/hooks";
 
 const ModalProvider = ({children}) => {
     const appSlice = useAppSelector((state) => state.app);

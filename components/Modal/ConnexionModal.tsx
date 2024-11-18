@@ -16,9 +16,9 @@ import {Label} from "@/components/ui/label";
 import {cn} from "@/lib/utils";
 import useMediaQuery from "@/utils/useMediaQuery";
 import React, {useState} from "react";
-import {useAppDispatch, useAppSelector} from "@/lib/hooks";
 import {setModal} from "@/features/appSlice";
 import {useTranslation} from "react-i18next";
+import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 
 // -------------
 
