@@ -1,11 +1,7 @@
 "use client";
 
+import { ActionButton } from "@/components/buttons/ActionButton";
 import { Button } from "@/components/ui/button";
-import TypographieBlockquote from "@/components/ui/TypographieBlockquote";
-import TypographieH1 from "@/components/ui/TypographieH1";
-import TypographieH2 from "@/components/ui/TypographieH2";
-import TypographieH3 from "@/components/ui/TypographieH3";
-import TypographieH4 from "@/components/ui/TypographieH4";
 import TypographieP from "@/components/ui/TypographieP";
 import {useAppDispatch} from "@/lib/hooks";
 import {setModal} from "@/features/appSlice";
@@ -15,8 +11,13 @@ import {useTranslation} from "react-i18next";
 // --------------
 
 export default function Home() {
+    const { t } = useTranslation();
 
-    const {t} = useTranslation();
+    const actionsButtons = [
+        { text: t("Game rules"), action: null, picto: null },
+        { text: t("Start a game"), action: null, picto: null },
+        { text: t("Dashboard"), action: null, picto: null },
+    ];
 
     const dispatch = useAppDispatch();
 
@@ -25,16 +26,30 @@ export default function Home() {
     }
 
     return (
-        <div>
-            <TypographieH1>H1</TypographieH1>
-            <TypographieH2>H2</TypographieH2>
-            <TypographieH3>H3</TypographieH3>
-            <TypographieH4>H4</TypographieH4>
-            <TypographieP>P</TypographieP>
-            <TypographieBlockquote>Block quote</TypographieBlockquote>
-            <Button>Click me</Button>
-            <div onClick={handleConnexion}>
-                <TypographieP>{t("Log in")}</TypographieP>
+        <div className="flex-1 flex justify-center">
+            <div className="container flex flex-col items-center justify-between mt-2 sm:mt-4">
+                <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center gap-8">
+                        <h1 className="font-black text-primary uppercase text-4xl sm:text-6xl text-center">
+                            {`${t("Welcome")} !`}
+                        </h1>
+                        <TypographieP className="text-primary text-center mb-4">
+                            {`${t("Engage is a platform that allows you to create and manage your own events.")}`}
+                        </TypographieP>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-between mt-8 gap-4 w-3/4 sm:w-2/3">
+                        {actionsButtons.map((actionButton, index) => (
+                            <ActionButton key={index} text={actionButton.text} />
+                        ))}
+                    </div>
+                </div>
+                <div onClick={handleConnexion}>
+                    <TypographieP>{t("Log in")}</TypographieP>
+                </div>
+                <Button variant="link" className="mb-4 underline">
+                    {t("Login")}
+                </Button>
             </div>
         </div>
     );
