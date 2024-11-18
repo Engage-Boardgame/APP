@@ -1,5 +1,10 @@
 {
     "Welcome to React": "Bienvenue à React",
+    "Connection": "Connexion",
+    "Log in": "Se connecter",
+    "Username": "Nom d'utilisateur",
+    "Password": "Mot de passe",
+    "Cancel": "Annuler",
     "Welcome": "Bienvenue",
     "Error 404": "Erreur 404",
     "The page you are looking for does not exist": "La page que vous recherchez n'existe pas",

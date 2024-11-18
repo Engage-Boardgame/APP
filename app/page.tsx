@@ -3,7 +3,12 @@
 import { ActionButton } from "@/components/buttons/ActionButton";
 import { Button } from "@/components/ui/button";
 import TypographieP from "@/components/ui/TypographieP";
-import { useTranslation } from "react-i18next";
+import {setModal} from "@/features/appSlice";
+import {CONNEXION_MODAL} from "@/components/Factory/ModalFactory";
+import {useTranslation} from "react-i18next";
+import {useAppDispatch} from "@/hooks/hooks";
+
+// --------------
 
 export default function Home() {
     const { t } = useTranslation();
@@ -13,6 +18,12 @@ export default function Home() {
         { text: t("Start a game"), action: null, picto: null },
         { text: t("Dashboard"), action: null, picto: null },
     ];
+
+    const dispatch = useAppDispatch();
+
+    const handleConnexion = () => {
+        dispatch(setModal(CONNEXION_MODAL));
+    }
 
     return (
         <div className="flex-1 flex justify-center">
@@ -33,8 +44,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-                <Button variant="link" className="mb-4 underline">
-                    {t("Login")}
+                <Button variant="link" onClick={handleConnexion} className="mb-4 underline">
+                    {t("Log in")}
                 </Button>
             </div>
         </div>
