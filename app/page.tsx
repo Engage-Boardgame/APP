@@ -1,22 +1,34 @@
 "use client";
 
 import { ActionButton } from "@/components/buttons/ActionButton";
+import { CONNEXION_MODAL } from "@/components/Factory/ModalFactory";
 import { Button } from "@/components/ui/button";
 import TypographieP from "@/components/ui/TypographieP";
-import {setModal} from "@/features/appSlice";
-import {CONNEXION_MODAL} from "@/components/Factory/ModalFactory";
-import {useTranslation} from "react-i18next";
-import {useAppDispatch} from "@/hooks/hooks";
-
-// --------------
+import { setModal } from "@/features/appSlice";
+import { useAppDispatch } from "@/hooks/hooks";
+import { ActionButtonType } from "@/types/ActionButtonType";
+import { BookText, HomeIcon, Play } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
     const { t } = useTranslation();
 
-    const actionsButtons = [
-        { text: t("Game rules"), action: null, picto: null },
-        { text: t("Start a game"), action: null, picto: null },
-        { text: t("Dashboard"), action: null, picto: null },
+    const onClickGameRules = () => {
+        console.log("Game rules");
+    };
+
+    const onClickStartGame = () => {
+        console.log("Start a game");
+    };
+
+    const onClickDashboard = () => {
+        console.log("Dashboard");
+    };
+
+    const actionsButtons: ActionButtonType[] = [
+        { text: t("Game rules"), action: onClickGameRules, picto: <BookText /> },
+        { text: t("Start a game"), action: onClickStartGame, picto: <Play /> },
+        { text: t("Dashboard"), action: onClickDashboard, picto: <HomeIcon /> },
     ];
 
     const dispatch = useAppDispatch();
@@ -38,9 +50,9 @@ export default function Home() {
                         </TypographieP>
                     </div>
 
-                    <div className="flex flex-col items-center justify-between mt-8 gap-4 w-3/4 sm:w-2/3">
+                    <div className="flex flex-col items-center justify-between mt-8 gap-4 w-4/5 sm:w-2/3">
                         {actionsButtons.map((actionButton, index) => (
-                            <ActionButton key={index} text={actionButton.text} />
+                            <ActionButton key={index} actionButton={actionButton} />
                         ))}
                     </div>
                 </div>
