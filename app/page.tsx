@@ -1,8 +1,11 @@
 "use client";
 
 import { ActionButton } from "@/components/buttons/ActionButton";
+import { CONNEXION_MODAL } from "@/components/Factory/ModalFactory";
 import { Button } from "@/components/ui/button";
 import TypographieP from "@/components/ui/TypographieP";
+import { setModal } from "@/features/appSlice";
+import { useAppDispatch } from "@/hooks/hooks";
 import { ActionButtonType } from "@/types/ActionButtonType";
 import { BookText, HomeIcon, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -28,6 +31,12 @@ export default function Home() {
         { text: t("Dashboard"), action: onClickDashboard, picto: <HomeIcon /> },
     ];
 
+    const dispatch = useAppDispatch();
+
+    const handleConnexion = () => {
+        dispatch(setModal(CONNEXION_MODAL));
+    }
+
     return (
         <div className="flex-1 flex justify-center">
             <div className="container flex flex-col items-center justify-between mt-2 sm:mt-4">
@@ -47,8 +56,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-                <Button variant="link" className="mb-4 underline">
-                    {t("Login")}
+                <Button variant="link" onClick={handleConnexion} className="mb-4 underline">
+                    {t("Log in")}
                 </Button>
             </div>
         </div>
