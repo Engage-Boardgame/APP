@@ -9,9 +9,14 @@ import { useAppDispatch } from "@/hooks/hooks";
 import { ActionButtonType } from "@/types/ActionButtonType";
 import { BookText, HomeIcon, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {useRouter} from "next/navigation";
+
+// -------------
 
 export default function Home() {
+
     const { t } = useTranslation();
+    const router = useRouter();
 
     const onClickGameRules = () => {
         console.log("Game rules");
@@ -19,6 +24,7 @@ export default function Home() {
 
     const onClickStartGame = () => {
         console.log("Start a game");
+        router.push('/game')
     };
 
     const onClickDashboard = () => {

@@ -1,7 +1,7 @@
-const TypographieH4 = ({children}) => {
+const TypographieH4 = ({children, className}) => {
 
     return (
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        <h4 className={`scroll-m-20 text-xl font-semibold tracking-tight ${className}`}>
             {children}
         </h4>
     )
