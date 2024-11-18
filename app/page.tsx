@@ -3,15 +3,18 @@
 import { ActionButton } from "@/components/buttons/ActionButton";
 import { CONNEXION_MODAL } from "@/components/Factory/ModalFactory";
 import { Button } from "@/components/ui/button";
+import TypographieBigH1 from "@/components/ui/TypographieBigH1";
 import TypographieP from "@/components/ui/TypographieP";
 import { setModal } from "@/features/appSlice";
 import { useAppDispatch } from "@/hooks/hooks";
 import { ActionButtonType } from "@/types/ActionButtonType";
 import { BookText, HomeIcon, Play } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
     const { t } = useTranslation();
+    const router = useRouter();
 
     const onClickGameRules = () => {
         console.log("Game rules");
@@ -22,7 +25,7 @@ export default function Home() {
     };
 
     const onClickDashboard = () => {
-        console.log("Dashboard");
+        router.push("/dashboard");
     };
 
     const actionsButtons: ActionButtonType[] = [
@@ -42,9 +45,7 @@ export default function Home() {
             <div className="container flex flex-col items-center justify-between mt-2 sm:mt-4">
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col items-center gap-8">
-                        <h1 className="font-black text-primary uppercase text-4xl sm:text-6xl text-center">
-                            {`${t("Welcome")} !`}
-                        </h1>
+                        <TypographieBigH1>{t("Welcome")} !</TypographieBigH1>
                         <TypographieP className="text-primary text-center mb-4">
                             {`${t("Engage is a platform that allows you to create and manage your own events.")}`}
                         </TypographieP>

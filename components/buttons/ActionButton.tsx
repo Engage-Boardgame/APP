@@ -7,7 +7,7 @@ type ActionButtonProps = {
 
 export const ActionButton = ({ actionButton }: ActionButtonProps) => {
     return (
-        <Button className="w-full relative" onClick={actionButton.action}>
+        <Button className="w-full h-12 relative" onClick={actionButton.action}>
             <div className="w-4 h-4 absolute left-2">{actionButton.picto}</div>
             <span>{actionButton.text}</span>
         </Button>
