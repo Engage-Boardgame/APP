@@ -46,7 +46,7 @@ export default function Home() {
                             {`${t("Welcome")} !`}
                         </h1>
                         <TypographieP className="text-primary text-center mb-4">
-                            {`${t("Engage is a platform that allows you to create and manage your own events.")}`}
+                            {`${t("Engage description")}`}
                         </TypographieP>
                     </div>
 
