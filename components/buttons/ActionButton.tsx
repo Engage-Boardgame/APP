@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ActionButtonType } from "@/types/ActionButtonType";
+import React from "react";
 
 type ActionButtonProps = {
     actionButton: ActionButtonType;
@@ -8,7 +9,7 @@ type ActionButtonProps = {
 export const ActionButton = ({ actionButton }: ActionButtonProps) => {
     return (
         <Button className="w-full h-12 relative" onClick={actionButton.action}>
-            <div className="w-4 h-4 absolute left-2">{actionButton.picto}</div>
+            {React.cloneElement(actionButton.picto as React.ReactElement, { className: "!w-6 !h-6 absolute left-2" })}
             <span>{actionButton.text}</span>
         </Button>
     );
