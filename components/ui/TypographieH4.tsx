@@ -1,7 +1,13 @@
-const TypographieH4 = ({children}) => {
+import {cn} from "@/lib/utils";
+
+type TypographiePProps = {
+    children: React.ReactNode;
+    className?: string;
+};
+const TypographieH4 = ({children, className}: TypographiePProps) => {
 
     return (
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        <h4 className={cn("scroll-m-20 text-xl font-semibold tracking-tight", className)}>
             {children}
         </h4>
     )
