@@ -15,5 +15,13 @@
     "Login": "Login",
     "Job cards": "Job cards",
     "How a round runs": "How a round runs",
-    "rules": "Before the first round begins, a game master must be appointed. This is the player who most recently had a job interview. He then draws a ‘Chance’ card that will move him forward or backwards by 1 to 3 squares. After moving his character, he rolls the coloured die. The player to his right draws a card of the colour on which the die fell and asks him the question. The player has to answer the question with an argument. Depending on the scoring method (cooperative or competitive), the number of squares he has to cover will correspond to the difficulty of the question. If the game master comes across a ‘Truth’ card, a timer is started and the player must answer the question within the allotted time. If they come across a ‘Job’ card, they roll the 20 die and find the number corresponding to a job on the list of jobs. He then has to make the other players guess the job by drawing it. Each player can give a maximum of 2 answers. If the game master succeeds in getting the players to guess the job, he moves 2 squares forward and the person who found the job moves one square forward. If the game master does not know the job, he can use a description, but if he wins he will only move forward one square."
+    "rules": "He then draws a ‘Chance’ card that will move him forward or backwards by 1 to 3 squares. After moving his character, he rolls the coloured die. The player to his right draws a card of the colour on which the die fell and asks him the question. The player has to answer the question with an argument. Depending on the game mode (cooperative or competitive), the number of squares he has to cover will correspond to the difficulty of the question.",
+    "Explanatory video": "Explanatory video",
+    "Start the game": "Start the game",
+    "rules-start-game": "Before the first round begins, a game master must be appointed. This is the player who most recently had a job interview.",
+    "Game mode": "Game mode",
+    "Truth cards": "Truth cards",
+    "The job cards": "Job cards",
+    "rules-truth-cards": "If the game master comes across a ‘Truth’ card, a timer is started and the player must answer the question within the allotted time.",
+    "rules-job-cards": "If the game master come across a ‘Job’ card, they roll the 20 die and find the number corresponding to a job on the list of jobs. He then has to make the other players guess the job by drawing it. Each player can give a maximum of 2 answers. If the game master succeeds in getting the players to guess the job, he moves 2 squares forward and the person who found the job moves one square forward. If the game master does not know the job, he can use a description, but if he wins he will only move forward one square."
 }
