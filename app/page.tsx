@@ -17,7 +17,7 @@ export default function Home() {
     const router = useRouter();
 
     const onClickGameRules = () => {
-        console.log("Game rules");
+        router.push("/rules");
     };
 
     const onClickStartGame = () => {
