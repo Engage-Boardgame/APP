@@ -2,8 +2,8 @@
 import {useTranslation} from "react-i18next";
 import TypographieBigH1 from "@/components/ui/TypographieBigH1";
 import TypographieH2 from "@/components/ui/TypographieH2";
-import TypographieP from "@/components/ui/TypographieP";
 import GlobalRuleSection from "@/app/rules/GlobalRuleSection";
+import RuleGameModeSection from "@/app/rules/RuleGameModeSection";
 
 // --------------
 
@@ -26,7 +26,7 @@ export default function RulesView() {
             </div>
             <GlobalRuleSection title={t("Start the game")} description={t("rules-start-game")}/>
             <GlobalRuleSection title={t("How a round runs")} description={t("rules")} />
-            <GlobalRuleSection title={t("Game mode")} description={"Faire la description"} />
+            <RuleGameModeSection />
             <GlobalRuleSection title={t("Truth cards")} description={t("rules-truth-cards")} />
             <GlobalRuleSection title={t("The job cards")} description={t("rules-job-cards")} />
         </div>

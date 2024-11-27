@@ -23,5 +23,9 @@
     "Truth cards": "Truth cards",
     "The job cards": "Job cards",
     "rules-truth-cards": "If the game master comes across a ‘Truth’ card, a timer is started and the player must answer the question within the allotted time.",
-    "rules-job-cards": "If the game master come across a ‘Job’ card, they roll the 20 die and find the number corresponding to a job on the list of jobs. He then has to make the other players guess the job by drawing it. Each player can give a maximum of 2 answers. If the game master succeeds in getting the players to guess the job, he moves 2 squares forward and the person who found the job moves one square forward. If the game master does not know the job, he can use a description, but if he wins he will only move forward one square."
+    "rules-job-cards": "If the game master come across a ‘Job’ card, they roll the 20 die and find the number corresponding to a job on the list of jobs. He then has to make the other players guess the job by drawing it. Each player can give a maximum of 2 answers. If the game master succeeds in getting the players to guess the job, he moves 2 squares forward and the person who found the job moves one square forward. If the game master does not know the job, he can use a description, but if he wins he will only move forward one square.",
+    "Competitive": "Competitive",
+    "Cooperative": "Cooperative",
+    "rules-competitive": "If the master of the game has answered the question, he will advance the number of points corresponding to the difficulty.",
+    "rules-cooperative": "Each player will vote to decide whether or not they deserve the points by giving a thumbs-up or thumbs-down."
 }
