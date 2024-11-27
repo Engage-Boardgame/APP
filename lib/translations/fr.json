@@ -27,5 +27,6 @@
     "Competitive": "Compétitif",
     "Cooperative": "Coopératif",
     "rules-competitive": "Si le maître du jeu à répondu à la question il avance du nombre de points correspondant à la difficulté.",
-    "rules-cooperative": "Chacun des joueurs va voter pour décider si oui ou non il mérite les points en levant ou en baissant le pouce."
+    "rules-cooperative": "Chacun des joueurs va voter pour décider si oui ou non il mérite les points en levant ou en baissant le pouce.",
+    "Cards": "Cartes"
 }

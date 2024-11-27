@@ -27,5 +27,6 @@
     "Competitive": "Competitive",
     "Cooperative": "Cooperative",
     "rules-competitive": "If the master of the game has answered the question, he will advance the number of points corresponding to the difficulty.",
-    "rules-cooperative": "Each player will vote to decide whether or not they deserve the points by giving a thumbs-up or thumbs-down."
+    "rules-cooperative": "Each player will vote to decide whether or not they deserve the points by giving a thumbs-up or thumbs-down.",
+    "Cards": "Cards"
 }
